@@ -1,0 +1,23 @@
+.writePostButton {
+  position: sticky;
+  width: 60px;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 10px;
+  float: right;
+  margin-right: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.pencil {
+  position: relative;
+  right: -43px;
+  bottom: -17px;
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 641px) {
+  .writePostButton {
+    display: none;
+  }
+}

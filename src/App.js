@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/layout/Navbar";
+import Home from "./components/home/Home";
+import { Fragment, useState } from "react";
+import Circle from "./assets/Icons/Circle.svg";
+import PencilIcon from "./assets/Icons/outlined pencil.svg";
+import classes from "./App.module.css";
+import AuthModal from "./components/Auth/AuthModal";
 
 function App() {
+  let [loginInfo, setLoginInfo] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  console.log(loginInfo);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Navbar
+        {...{
+          loginInfo,
+          toggleModal: () => {
+            setShowModal(true);
+          },
+        }}
+      />
+      <Home loginInfo={loginInfo} />
+      <div
+        className={classes.writePostButton}
+        onClick={() => {
+          setShowModal(true);
+        }}
+      >
+        <img src={PencilIcon} className={classes.pencil} alt="" />
+        <img src={Circle} className={classes.circle} alt="" />
+      </div>
+      <AuthModal
+        // className={classes.height}
+        show={showModal}
+        onHide={() => {
+          setShowModal(false);
+        }}
+        logIn={(info) => {
+          setLoginInfo(info);
+        }}
+      />
+    </Fragment>
   );
 }
 

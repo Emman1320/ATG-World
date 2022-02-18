@@ -1,0 +1,127 @@
+.homeNavbarContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-bottom: 28px;
+  width: 80%;
+  border-bottom: 1px solid #e0e0e0;
+}
+.homeNavbarItems {
+  display: flex;
+  position: relative;
+  top: 1px;
+  color: #8a8a8a;
+  font-size: 16px;
+  line-height: 30px;
+  gap: 20px;
+}
+.active {
+  border-bottom: 1px solid #000000;
+  color: #000000;
+}
+.homeNavbarActions {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 10px;
+}
+.homeNavbarActions button,
+.mobileHomeNavbar button {
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "IBM Plex Sans", sans-serif;
+  border-radius: 4px;
+  border: 0px;
+  line-height: 19px;
+  display: flex;
+  padding: 8px 10px;
+}
+.homeNavbarActions button:nth-child(1),
+.mobileHomeNavbar button {
+  color: black;
+  background: #edeef0;
+}
+.homeNavbarActions button:nth-child(2) {
+  color: white;
+  background: #2f6ce5;
+}
+
+.homeNavbarActions div,
+.mobileHomeNavbar button div {
+  position: relative;
+  top: -1px;
+}
+.homeNavbarActions button:nth-child(1) div,
+.mobileHomeNavbar button div {
+  margin-left: 10px;
+}
+.homeNavbarActions button:nth-child(2) div {
+  margin-right: 10px;
+}
+.homeNavbarActions button:nth-child(1):focus {
+  box-shadow: 0 0 0 0.25rem rgba(138, 138, 138, 0.267) !important;
+}
+button.loggedIn {
+  background: #ffffff !important;
+  border: 0.8px solid #989899 !important;
+  box-sizing: border-box !important;
+  border-radius: 4px !important;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  color: #6a6a6b !important;
+}
+button.loggedIn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(138, 138, 138, 0.267) !important;
+}
+.mobileHomeNavbar {
+  display: none;
+}
+@media (max-width: 800px) {
+  .homeNavbarItems {
+    gap: 10px;
+  }
+  .homeNavbarContainer {
+    width: 90%;
+  }
+}
+@media (max-width: 660px) {
+  .homeNavbarItems {
+    gap: 5px;
+  }
+  .homeNavbarContainer {
+    width: 90%;
+  }
+}
+@media (max-width: 640px) {
+  .homeNavbarContainer {
+    display: none;
+  }
+  .mobileHomeNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+  }
+  .mobileHomeNavbar > div {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #212529;
+  }
+  .mobileHomeNavbar button {
+    font-weight: 500;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 420px) {
+  .mobileHomeNavbar > div {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #212529;
+  }
+  .mobileHomeNavbar button {
+    font-size: 13px;
+    line-height: 17px;
+  }
+}

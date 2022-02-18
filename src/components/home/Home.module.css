@@ -1,0 +1,181 @@
+.heroImage img {
+  width: 100%;
+}
+.heroImage {
+  position: relative;
+  background: url("../../assets/hero-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0%;
+  height: 29.4rem;
+}
+.heroImage > div {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.heroImageText {
+  color: white;
+  position: absolute;
+  height: 47px;
+  left: 12%;
+  bottom: 25%;
+}
+.heroImageText div:nth-child(1) {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+  margin-bottom: 4px;
+}
+.heroImageText div:nth-child(2) {
+  font-size: 18px;
+  line-height: 23.4px;
+}
+.main {
+  margin: auto;
+  width: 80% !important;
+  padding-bottom: 90px;
+  height: 100%;
+}
+.main > div > div {
+  padding: 0;
+}
+.main > div > div:nth-child(2) {
+  padding: 0;
+  padding-left: 10%;
+}
+.locationField {
+  margin-top: 27px;
+  margin-bottom: 32px;
+  border-bottom: 0.4px solid #b8b8b8;
+  padding-bottom: 9px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: max-content;
+}
+.locationField input {
+  font-size: 14px;
+  line-height: 18px;
+  border: 0;
+  width: 100%;
+  color: black;
+}
+.locationField input:focus {
+  outline: 0;
+}
+.locationField img {
+  padding: 3px;
+}
+.locationDesc {
+  font-size: 12px;
+  display: flex;
+  opacity: 0.6;
+  line-height: 16px;
+  margin-bottom: 54px;
+}
+.locationDesc div:nth-child(1) {
+  padding-right: 8.33px;
+}
+.groupsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  font-size: 14px;
+  width: 100%;
+  line-height: 18px;
+  color: #000000;
+}
+.groupsContainer .group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.groupsContainer > div:nth-child(1) {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.groupsContainer > div:nth-child(1) svg {
+  position: relative;
+  width: 16.5px;
+  top: -2px;
+}
+.followButton {
+  background: #edeef0 !important;
+  border-radius: 14px !important;
+  font-size: 12px !important;
+  color: black !important;
+  width: 60px;
+  height: 24px;
+  border: 0 !important;
+  line-height: 1 !important;
+  padding: 4px 12px;
+  text-align: start;
+}
+.followButton:focus {
+  box-shadow: 0 0 0 0.25rem rgba(138, 138, 138, 0.267) !important;
+}
+.group > div:nth-child(1) span {
+  margin-left: 12px;
+}
+.groupsContainer a {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  margin-top: 2rem;
+  padding: 0;
+  color: #2f6ce5;
+}
+
+@media (max-width: 800px) {
+  .main {
+    min-width: 90% !important;
+  }
+  .heroImageText {
+    left: 5%;
+    bottom: 18%;
+  }
+}
+@media (max-width: 670px) {
+  .main > div > div:nth-child(2) {
+    padding-left: 6% !important;
+  }
+}
+@media (max-width: 640px) {
+  .heroImage {
+    zoom: 0.7;
+  }
+  .main > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main > div > div:nth-child(1) {
+    width: 100%;
+  }
+  .main {
+    min-width: 100% !important;
+    background-color: #F1F3F5;
+  }
+  .main > div > div:nth-child(2) {
+    display: none;
+  }
+  .heroImageText {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 420px) {
+  .heroImage {
+    zoom: 0.6;
+  }
+}
