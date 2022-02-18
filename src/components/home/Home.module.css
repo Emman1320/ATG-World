@@ -137,7 +137,16 @@
   color: #2f6ce5;
 }
 
+@media (max-width: 1000px) {
+  .main > div > div:nth-child(2) {
+    padding-left: 6% !important;
+  }
+}
 @media (max-width: 800px) {
+  .main > div > div:nth-child(2) {
+    padding-left: 3% !important;
+  }
+
   .main {
     min-width: 90% !important;
   }
@@ -148,7 +157,7 @@
 }
 @media (max-width: 670px) {
   .main > div > div:nth-child(2) {
-    padding-left: 6% !important;
+    padding-left: 2% !important;
   }
 }
 @media (max-width: 640px) {
@@ -165,7 +174,7 @@
   }
   .main {
     min-width: 100% !important;
-    background-color: #F1F3F5;
+    background-color: #f1f3f5;
   }
   .main > div > div:nth-child(2) {
     display: none;

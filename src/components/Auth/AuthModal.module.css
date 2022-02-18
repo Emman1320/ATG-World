@@ -91,7 +91,7 @@
     max-width: none;
   }
   .modalContainer > div > div {
-    height: 500px;
+    height: 550px;
   }
 }
 @media (max-width: 840px) {
